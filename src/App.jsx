@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnologyCard from "./components/TechnologyCard";
+import StackPanel from "./components/StackPanel";
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
+  const [stack, setStack] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +21,24 @@ function App() {
   }, []);
 
   const handleAddToStack = (tech) => {
-    console.log("Add to stack clicked:", tech.name);
+    const alreadyAdded = stack.some((item) => item.id === tech.id);
+    if (alreadyAdded) {
+      toast.warn(tech.name + " is already in your stack!");
+      return;
+    }
+    setStack((prev) => [...prev, tech]);
+    toast.success(tech.name + " added to your stack!");
+  };
+
+  const handleRemove = (id) => {
+    const tech = stack.find((item) => item.id === id);
+    setStack((prev) => prev.filter((item) => item.id !== id));
+    if (tech) toast.info(tech.name + " removed from your stack.");
+  };
+
+  const handleRemoveAll = () => {
+    setStack([]);
+    toast.info("Your stack has been cleared.");
   };
 
   return (
@@ -38,18 +59,28 @@ function App() {
             Loading technologies...
           </p>
         ) : (
-          <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
-            {technologies.map((tech) => (
-              <TechnologyCard
-                key={tech.id}
-                tech={tech}
-                isAdded={false}
-                onAdd={handleAddToStack}
-              />
-            ))}
+          <div className="grid lg:grid-cols-[1fr_320px] gap-8 items-start">
+            <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              {technologies.map((tech) => (
+                <TechnologyCard
+                  key={tech.id}
+                  tech={tech}
+                  isAdded={stack.some((item) => item.id === tech.id)}
+                  onAdd={handleAddToStack}
+                />
+              ))}
+            </div>
+
+            <StackPanel
+              stack={stack}
+              onRemove={handleRemove}
+              onRemoveAll={handleRemoveAll}
+            />
           </div>
         )}
       </section>
+
+      <ToastContainer position="top-right" autoClose={2500} theme="colored" />
     </div>
   );
 }

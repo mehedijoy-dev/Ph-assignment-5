@@ -33,10 +33,9 @@ export default function TechnologyCard({ tech, isAdded, onAdd }) {
 
       <button
         onClick={() => onAdd(tech)}
-        disabled={isAdded}
         className={
           isAdded
-            ? "mt-5 w-full py-2.5 rounded-md font-semibold text-sm bg-gray-100 text-gray-400 cursor-not-allowed"
+            ? "mt-5 w-full py-2.5 rounded-md font-semibold text-sm bg-gray-100 text-gray-500"
             : "mt-5 w-full py-2.5 rounded-md font-semibold text-sm bg-ink text-white hover:bg-gray-800 transition-colors"
         }
       >
