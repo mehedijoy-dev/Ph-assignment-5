@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer id="contact" className="bg-white border-t border-gray-100 mt-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 text-center md:text-left md:grid-cols-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 items-start text-center md:text-left md:grid-cols-4">
         <div>
           <div className="flex items-center justify-center md:justify-start gap-2">
             <span className="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center text-white font-bold text-sm">
@@ -30,7 +30,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-3 gap-4 md:contents">
           <div>
-            <h4 className="text-xs font-semibold text-gray-400 tracking-wide mb-3 sm:mb-4">
+            <h4 className="text-xs font-semibold text-gray-400 tracking-wide mb-3 sm:mb-4 pt-1">
               PRODUCT
             </h4>
             <ul className="flex flex-col gap-2 sm:gap-2.5 text-xs sm:text-sm text-gray-600">
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold text-gray-400 tracking-wide mb-3 sm:mb-4">
+            <h4 className="text-xs font-semibold text-gray-400 tracking-wide mb-3 sm:mb-4 pt-1">
               COMPANY
             </h4>
             <ul className="flex flex-col gap-2 sm:gap-2.5 text-xs sm:text-sm text-gray-600">
@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold text-gray-400 tracking-wide mb-3 sm:mb-4">
+            <h4 className="text-xs font-semibold text-gray-400 tracking-wide mb-3 sm:mb-4 pt-1">
               LEGAL
             </h4>
             <ul className="flex flex-col gap-2 sm:gap-2.5 text-xs sm:text-sm text-gray-600">
