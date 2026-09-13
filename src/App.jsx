@@ -49,11 +49,17 @@ function App() {
 
       <section
         id="technologies"
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-24"
       >
-        <h2 className="text-2xl sm:text-3xl font-extrabold mb-8">
-          Explore the <span className="text-gradient-brand">Technologies</span>
-        </h2>
+        <div className="text-center sm:text-left mb-8">
+          <h2 className="text-2xl sm:text-3xl font-extrabold">
+            Explore the{" "}
+            <span className="text-gradient-brand">Technologies</span>
+          </h2>
+          <p className="mt-2 text-gray-400 text-sm sm:text-base">
+            Pick one technology per category to build your ideal stack.
+          </p>
+        </div>
 
         {loading ? (
           <p className="text-center text-gray-400 py-20">

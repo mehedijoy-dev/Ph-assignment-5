@@ -10,7 +10,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <button
-          className="md:hidden p-2 -ml-2 rounded-lg hover:bg-gray-100"
+          className="md:hidden p-2 -ml-2 rounded-lg hover:bg-gray-100 shrink-0"
           onClick={() => setMenuOpen((prev) => !prev)}
           aria-label="Toggle menu"
         >
@@ -24,8 +24,20 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <a href="#home" className="flex items-center md:mr-auto">
-          <img src={logo} alt="Dev Stack logo" className="h-8" />
+        <a href="#home" className="flex md:hidden flex-1 justify-center">
+          <img
+            src={logo}
+            alt="Dev Stack logo"
+            className="h-8 w-auto object-contain"
+          />
+        </a>
+
+        <a href="#home" className="hidden md:flex items-center md:mr-auto">
+          <img
+            src={logo}
+            alt="Dev Stack logo"
+            className="h-9 w-auto object-contain"
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
@@ -44,11 +56,11 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <button className="text-sm font-medium text-gray-700 hover:text-gray-900 hidden sm:block">
+        <div className="flex items-center gap-1 sm:gap-3 shrink-0">
+          <button className="text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900 px-1">
             Sign In
           </button>
-          <button className="btn-gradient text-sm font-semibold px-4 py-2 rounded-full">
+          <button className="btn-gradient text-xs sm:text-sm font-semibold px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full whitespace-nowrap">
             Sign Up
           </button>
         </div>
