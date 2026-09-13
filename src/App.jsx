@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnologyCard from "./components/TechnologyCard";
 import StackPanel from "./components/StackPanel";
+import Footer from "./components/Footer";
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
@@ -80,6 +81,7 @@ function App() {
         )}
       </section>
 
+      <Footer />
       <ToastContainer position="top-right" autoClose={2500} theme="colored" />
     </div>
   );
