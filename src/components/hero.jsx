@@ -36,11 +36,11 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex justify-center md:justify-end">
+        <div className="flex justify-center md:justify-end md:-mt-6">
           <img
             src={bannerImage}
             alt="Technology stack illustration"
-            className="w-full max-w-xs"
+            style={{ width: "350px", height: "350px", objectFit: "contain" }}
           />
         </div>
       </div>
