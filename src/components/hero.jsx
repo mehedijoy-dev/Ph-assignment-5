@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 sm:py-12 md:py-16"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-4 sm:pt-24 sm:pb-12 md:pt-28 md:pb-16"
     >
       <div className="grid md:grid-cols-2 gap-8 items-start">
         <div className="text-center md:text-left">
@@ -20,32 +20,27 @@ export default function Hero() {
             project.
           </p>
 
-          <div className="mt-6 flex gap-2 sm:gap-4 justify-center md:justify-start">
+          <div className="mt-6 flex items-center justify-center md:justify-start gap-3 w-full max-w-xs sm:max-w-sm mx-auto md:mx-0">
             <a
               href="#technologies"
-              className="btn-gradient font-semibold text-sm sm:text-base px-3 sm:px-6 py-2.5 sm:py-3 rounded-md whitespace-nowrap"
+              className="btn-gradient flex-1 inline-flex items-center justify-center font-semibold text-xs sm:text-sm h-11 px-3 rounded-lg whitespace-nowrap"
             >
               Explore Technologies
             </a>
             <a
               href="#about"
-              className="font-semibold text-sm sm:text-base px-3 sm:px-6 py-2.5 sm:py-3 rounded-md border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-colors whitespace-nowrap"
+              className="flex-1 inline-flex items-center justify-center font-semibold text-xs sm:text-sm h-11 px-3 rounded-lg border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-colors whitespace-nowrap"
             >
               Learn More
             </a>
           </div>
         </div>
 
-        <div className="flex justify-center md:justify-end md:-mt-6">
+        <div className="w-full flex justify-center items-center -mt-12 sm:-mt-16 md:-mt-16 -mb-4 sm:-mb-6">
           <img
             src={bannerImage}
             alt="Technology stack illustration"
-            style={{
-              width: "380px",
-              height: "380px",
-              maxWidth: "90%",
-              objectFit: "contain",
-            }}
+            className="w-full h-auto object-contain max-w-[380px] sm:max-w-[480px] md:max-w-none scale-125 sm:scale-135 md:scale-105"
           />
         </div>
       </div>

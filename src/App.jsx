@@ -88,7 +88,12 @@ function App() {
       </section>
 
       <Footer />
-      <ToastContainer position="top-right" autoClose={2500} theme="colored" />
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        theme="colored"
+        style={{ width: "300px" }}
+      />
     </div>
   );
 }
