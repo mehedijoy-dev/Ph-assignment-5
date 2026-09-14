@@ -19,12 +19,6 @@ body {
   color: #14162b;
 }
 
-/* ---------------------------------------------
-   Brand gradient — single source of truth.
-   Change this ONE place to re-theme the brand
-   name, hero heading highlight, and every
-   primary button at once.
---------------------------------------------- */
 .text-gradient-brand {
   background: linear-gradient(90deg, #ff7a45 0%, #ff3d9a 50%, #7b3fe4 100%);
   -webkit-background-clip: text;
