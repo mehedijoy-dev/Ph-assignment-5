@@ -57,7 +57,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-1 sm:gap-3 shrink-0">
-          <button className="text-xs sm:text-sm font-medium text-gray-700 hover:text-gray-900 px-1">
+          <button className="text-xs sm:text-sm font-medium text-gray-700 hover:text-pink-500 px-1 transition-colors">
             Sign In
           </button>
           <button className="btn-gradient text-xs sm:text-sm font-semibold px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full whitespace-nowrap">

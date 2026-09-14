@@ -65,3 +65,8 @@ body {
   background: #d9d9e6;
   border-radius: 999px;
 }
+
+header nav a:hover,
+footer a:hover {
+  color: #ec4899 !important;
+}
