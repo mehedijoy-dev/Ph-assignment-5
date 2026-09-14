@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnologyCard from "./components/TechnologyCard";
 import StackPanel from "./components/StackPanel";
+import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
 function App() {
@@ -49,7 +50,7 @@ function App() {
 
       <section
         id="technologies"
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-24"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-10 sm:pb-24"
       >
         <div className="text-center sm:text-left mb-8">
           <h2 className="text-2xl sm:text-3xl font-extrabold">
@@ -66,7 +67,7 @@ function App() {
             Loading technologies...
           </p>
         ) : (
-          <div className="grid lg:grid-cols-[1fr_320px] gap-8 items-start">
+          <div className="grid lg:grid-cols-[1fr_280px] gap-2 items-start">
             <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
               {technologies.map((tech) => (
                 <TechnologyCard
@@ -87,6 +88,7 @@ function App() {
         )}
       </section>
 
+      <FAQ />
       <Footer />
       <ToastContainer
         position="top-right"
